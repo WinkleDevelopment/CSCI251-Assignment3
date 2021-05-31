@@ -61,7 +61,12 @@ int User::varity() {}
 int User::compareTo(User otherUser) {}
 
 /* Pool Class */
-Pool::Pool() {}
+Pool::Pool() {
+	vector<User> tmp;
+
+	this->name = "";
+	this->users = tmp;
+}
 
 Pool::Pool(string nM) {
 	vector<User> tmp;
