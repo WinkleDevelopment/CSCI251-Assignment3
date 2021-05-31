@@ -82,17 +82,24 @@ Pool::Pool(const Pool& copyPool) {
 	this->users = copyPool.users;
 }
 
-string Pool::getName() {}
+string Pool::getName() { return this->name; }
 
-vector<User> Pool::getUsers() {}
+vector<User> Pool::getUsers() { return this->users; }
 
-void Pool::setName(string newName) {}
+void Pool::setName(string newName) { this->name = newName; }
 
-void Pool::setUsers(vector<User> newUsers) {}
+void Pool::setUsers(vector<User> newUsers) { this->users = newUsers; }
 
-void Pool::addUser(User user) {}
+void Pool::addUser(User user) { this->getUsers().push_back(user); }
 
-void Pool::removeUser(User user) {}
+void Pool::removeUser(User user) {
+	auto idx = find(this->getUsers().begin(), this->getUsers().end(), user);
+	if (idx != this->getUsers().end()) {
+		this->getUsers().erase(idx);
+	} else {
+		cout << "User doesn't exist!";
+	}
+}
 
 void Pool::display() {}
 
