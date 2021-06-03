@@ -141,9 +141,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Monitor.h" />
+    <ClInclude Include="Urlgeneration.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Monitor.cpp" />
+    <ClCompile Include="Urlgeneration.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
